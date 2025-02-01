@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Clone Application - Developer Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .warning {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #ffeeba;
+            margin: 10px 0;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .endpoint {
+            background-color: #e9ecef;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voice Clone Application - Developer Guide</h1>
+    
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#architecture">Architecture Overview</a></li>
+        <li><a href="#setup">Development Setup</a></li>
+        <li><a href="#api">API Documentation</a></li>
+        <li><a href="#testing">Testing Guide</a></li>
+        <li><a href="#deployment">Deployment Guide</a></li>
+    </ul>
+
+    <h2 id="architecture">Architecture Overview</h2>
+    <p>The Voice Clone Application is built using the following technologies:</p>
+    <ul>
+        <li>FastAPI - Web framework for building APIs</li>
+        <li>TTS - Text-to-Speech library for voice processing</li>
+        <li>Uvicorn - ASGI server implementation</li>
+    </ul>
+
+    <h3>Component Structure</h3>
+    <pre>
+backend/
+├── app/
+│   ├── main.py         # FastAPI application and routes
+│   ├── models.py       # Pydantic models for request/response
+│   └── voice_processor.py  # Voice processing logic
+└── tests/
+    └── test_main.py    # Test cases
+    </pre>
+
+    <h2 id="setup">Development Setup</h2>
+    <h3>Prerequisites</h3>
+    <ul>
+        <li>Python 3.8 or higher</li>
+        <li>pip package manager</li>
+        <li>Virtual environment tool</li>
+    </ul>
+
+    <h3>Installation Steps</h3>
+    <pre>
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# Windows
+venv\Scripts\activate
+# Linux/MacOS
+source venv/bin/activate
+
+# Install dependencies
+pip install -r backend/requirements.txt
+    </pre>
